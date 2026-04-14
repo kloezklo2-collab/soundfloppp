@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Floppa Auto Sound</title>
+    <style>
+        body { 
+            background-color: white; 
+            margin: 0; 
+            height: 100vh; 
+            width: 100vw; 
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body onclick="playOnce()">
+
+    <script>
+        const audio = new Audio('Raise a floppa Meow Sound Effect.mp3');
+        let hasPlayed = false;
+
+        function playOnce() {
+            if (!hasPlayed) {
+                audio.play();
+                hasPlayed = true; // Esto bloquea el sonido para que no suene más veces
+                console.log("Sonido reproducido una única vez.");
+            }
+        }
+    </script>
+
+</body>
+</html>
